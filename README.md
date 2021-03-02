@@ -1,6 +1,6 @@
-## UDP Throughput Benchmarking Tools
+## UDP echo server/client for throughput benchmarking
 
-works only on Linux server
+This code works on Linux server.
 
 ### Preparation
 
@@ -42,6 +42,6 @@ cd target/release
 ./udpclient --count 10000000 --num 10 --server "127.0.0.1:8080"
 ```
 
-- sockets; how many sockets (and threads) you wanto build. (on different ephemeral port)
-- count: how many packet you want to sent for each sockets
+- sockets; how many sockets (and threads) you wanto build. (on different ephemeral port for each socket)
+- count: how many packet you want to sent for each socket
 - server: server address
