@@ -1,4 +1,4 @@
-## UDP echo server/client for throughput benchmarking
+## UDP echo server/client example just for throughput benchmarking
 
 This code works on Linux server.
 
