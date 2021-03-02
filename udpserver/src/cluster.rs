@@ -26,8 +26,7 @@ enum ClusterState {
 pub struct UdpSocketCluster {
     cpu_set: CpuSet,
     num_node: usize,
-    r_handles:
-        Vec<Option<JoinHandle<()>>>,
+    r_handles: Vec<Option<JoinHandle<()>>>,
     r_closers: Vec<Sender<()>>,
     c_closer: Option<Sender<()>>,
     c_handle: Option<JoinHandle<()>>,
@@ -119,8 +118,8 @@ impl UdpSocketCluster {
         if self.use_cbpf {
             println!("try to attach CBPF");
             unsafe {
-                //let ret = attach_reuseport_cbpf(first_fd, num_node.try_into().unwrap());
-                let ret = attach_reuseport_ebpf(first_fd, num_node.try_into().unwrap());
+                let ret = attach_reuseport_cbpf(first_fd, num_node.try_into().unwrap());
+                //let ret = attach_reuseport_ebpf(first_fd, num_node.try_into().unwrap());
                 if ret != 0 {
                     println!(
                         "failed CBPF setting: {} - {:?}",
