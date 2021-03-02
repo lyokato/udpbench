@@ -2,6 +2,20 @@
 
 works only on Linux server
 
+### Preparation
+
+You have to set some kernel options for enough beffer size.
+Proper numbers for each option are depends on your test's scale.
+
+- net.core.rmem_default
+- net.core.rmem_max
+- net.core.wmem_default
+- net.core.wmem_max
+- net.core.netdev_max_backlog
+- net.ipv4.udp_mem
+- net.ipv4.udp_rmem_min
+- net.ipv4.udp_wmem_min
+
 ### udpserver
 
 UDP Echo Server
