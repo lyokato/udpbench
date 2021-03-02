@@ -39,7 +39,7 @@ cd target/release
 cd udpclient
 cargo build --release
 cd target/release
-./udpclient --count 10000000 --num 10 --server "127.0.0.1:8080"
+./udpclient --sockets 32 --count 10000000 --server "127.0.0.1:8080"
 ```
 
 - sockets; how many sockets (and threads) you wanto build. (on different ephemeral port for each socket)
