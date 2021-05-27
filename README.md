@@ -4,7 +4,7 @@ This code works on Linux server.
 
 ### Preparation
 
-You have to set some kernel options for enough beffer size.
+You have to set some kernel options for enough buffer size.
 Proper numbers for each option are depends on your test's scale.
 
 - net.core.rmem_default
